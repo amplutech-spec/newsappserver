@@ -17,7 +17,10 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 // Routes
 const userRoutes = require("./routes/userRoutes");
+const newsRoutes = require("./routes/newsRoutes");
+
 app.use("/api/users", userRoutes);
+app.use('/api/news', newsRoutes);
 
 // Start Server
 const PORT = process.env.PORT || 5000;
